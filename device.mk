@@ -34,6 +34,17 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 ro.sf.lcd_density=480
 
+# NFC
+PRODUCT_PACKAGES += \
+    NfcNci \
+    libnfc-nci \
+    Tag \
+    com.android.nfc_extras
+        
+# NFC Config
+PRODUCT_COPY_FILES += \
+  $(DEVICE_PATH)/nfc/libnfc-nci.conf:system/etc/libnfc-nci.conf
+  
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:system/etc/permissions/android.hardware.consumerir.xml \
