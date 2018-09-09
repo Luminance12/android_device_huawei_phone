@@ -15,8 +15,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, vendor/omni/config/gsm.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/treble_common.mk)
 
-# Inherit device configuration
+TARGET_BOOTANIMATION_SIZE := 1080p
+
+$(call inherit-product, vendor/omni/config/common.mk)
+
 $(call inherit-product, device/huawei/phone/device.mk)
 
 # Device Path
