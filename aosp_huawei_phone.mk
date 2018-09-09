@@ -27,10 +27,10 @@ TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
 # Device identifier
-PRODUCT_BRAND := Android
+PRODUCT_BRAND := Huawei
 PRODUCT_MANUFACTURER := Huawei
 PRODUCT_PLATFORM := Kirin
-PRODUCT_NAME := aosp_huawei_phone
+PRODUCT_NAME := omni_huawei_phone
 PRODUCT_DEVICE := phone
-PRODUCT_MODEL := AOSP on Huawei phones
+PRODUCT_MODEL := Omni on Huawei phones
 
