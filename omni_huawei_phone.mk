@@ -15,17 +15,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, vendor/omni/config/gsm.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/treble_common.mk)
 
 TARGET_BOOTANIMATION_SIZE := 1080p
 
 $(call inherit-product, vendor/omni/config/common.mk)
-
-$(call inherit-product, device/huawei/phone/device.mk)
+$(call inherit-product, device/huawei/blanc/device.mk)
 
 # Device Path
-DEVICE_PATH := device/huawei/phone
+DEVICE_PATH := device/huawei/blanc
+ALLOW_MISSING_DEPENDENCIES := true
 
 # Bootanimation
 TARGET_SCREEN_HEIGHT := 1920
@@ -35,7 +37,7 @@ TARGET_SCREEN_WIDTH := 1080
 PRODUCT_BRAND := Huawei
 PRODUCT_MANUFACTURER := Huawei
 PRODUCT_PLATFORM := Kirin
-PRODUCT_NAME := omni_huawei_phone
-PRODUCT_DEVICE := phone
-PRODUCT_MODEL := Omni on Huawei phones
+PRODUCT_NAME := omni_blanc
+PRODUCT_DEVICE := blanc
+PRODUCT_MODEL := Omni on Blanc phones
 
